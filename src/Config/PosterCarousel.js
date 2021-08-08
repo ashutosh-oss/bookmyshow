@@ -1,30 +1,30 @@
 const settings = {
-    infinity: false,
-    autoplay: false,
+    infinite: false,
+    speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 2,
-    IntialSlide: 0,
+    slidesToScroll: 4,
+    intialSlide: 0,
     responsive: [
         {
         breakpoints: 1024,
         settings: {
             slidesToShow: 3,
-            slidesToScroll: 2,
+            slidesToScroll: 3,
             infinite: true,
         },
     },
     {
-        breakpoints: 764,
+        breakpoints: 600,
         settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 2,
-            InitialSlide: 1,
+            initialSlide: 2,
         },
     },
     {
-        breakpoints: 480,
+        breakpoints: 360,
         settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
 
         },

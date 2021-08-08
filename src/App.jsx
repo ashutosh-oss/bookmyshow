@@ -3,7 +3,7 @@ import {Route} from "react-router-dom";
 
 //hoc
 import DefaultHOC from "./HOC/default.HOC";
-import movieHOC from "./HOC/movie.HOC";
+import MovieHOC from "./HOC/movie.HOC";
 
 //components
 import HomePage from "./pages/home.page";
@@ -18,9 +18,9 @@ function App() {
   return (
      <>
   <DefaultHOC path="/" exact component={HomePage} />
-  <movieHOC path="/movie/:id" exact component={Movie}/>
+  <MovieHOC path="/movie/:id" exact component={Movie}/>
   </>
   ); 
-}
+};
 
 export default App;

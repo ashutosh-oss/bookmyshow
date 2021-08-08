@@ -1,27 +1,24 @@
 import React from 'react';
-
 import { Route } from "react-router-dom";
 
 
 //layouts
-import movieLayout from '../layouts/movie.layout';
+import MovieLayout from '../layouts/movie.layout';
 
 
-const movieHOC = ({component: Component, ...rest}) => {
+const MovieHOC = ({component: Component, ...rest}) => {
     return (
         <>
         <Route
         {...rest}
         component={(props) => (
-            <movieLayout>
+            <MovieLayout>
                 <Component {...props}/>
-            </movieLayout>
+            </MovieLayout>
         )}
-        
         />
-        
         </>
     );
 };
 
-export default movieHOC;
+export default MovieHOC;
