@@ -1,10 +1,49 @@
  import MovieHero  from "../components/MovieHero/MovieHero.component";
+ import PosterSlider from "../components/PosterSlider/PosterSlider.components";
+
+//configs
+import TempPosters from "../Config/TempImages.config";
  //cast
 import Cast from '../components/cast.components';
  import {FaCcVisa} from "react-icons/fa";
  import {CgPaypal} from "react-icons/cg";
  
  const Movie = () => {
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    intialSlide: 0,
+    responsive: [
+        {
+        breakpoints: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+        },
+    },
+    {
+        breakpoints: 600,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+        },
+    },
+    {
+        breakpoints: 360,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+
+        },
+    },
+],
+
+};
+
     return (
       <>
       <MovieHero/>
@@ -59,6 +98,14 @@ import Cast from '../components/cast.components';
     </div>
     <div className="my-8">
       <hr/>
+    </div>
+    <div>
+    <PosterSlider
+       config = {settings}
+       images={TempPosters}
+       title="You might also like" 
+       isDark={false}
+       />
     </div>
       </div>
       
