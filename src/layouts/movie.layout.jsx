@@ -19,7 +19,7 @@ import MovieNavbar from '../components/navbar/movieNavbar.component';
              setMovie(getMovieData.data);
          };
          requestMovie();
-     },[]);
+     },[id]);
     return (
         <>
            <MovieNavbar/>
