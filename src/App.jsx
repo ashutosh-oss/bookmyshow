@@ -1,4 +1,4 @@
-import {Route} from "react-router-dom";
+
 import axios from "axios";
 
 
@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 //axios default settings
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 axios.defaults.params = {};
-axios.defaults.params["api_key"] = process.env.REACT_APP_API_KEY;
+axios.defaults.params["api_key"] = "05302b84e3c5992cf3e94d2cc9b11c70";
 
 function App() {
   return (
